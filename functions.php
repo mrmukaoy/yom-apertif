@@ -9,7 +9,8 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	$this_theme = wp_get_theme();
+	define( '_S_VERSION', $this_theme->get( 'Version' ) );
 }
 
 if ( ! function_exists( 'apertif_setup' ) ) :
