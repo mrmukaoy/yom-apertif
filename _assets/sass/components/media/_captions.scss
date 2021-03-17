@@ -1,5 +1,5 @@
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: $font__line-height-body * 1rem;
 	max-width: 100%;
 
 	img[class*="wp-image-"] {

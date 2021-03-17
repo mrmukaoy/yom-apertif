@@ -4,8 +4,8 @@
 	float: left;
 
 	/*rtl:ignore*/
-	margin-right: 1.5em;
-	margin-bottom: 1.5em;
+	margin-right: $font__line-height-body * 1rem;
+	margin-bottom: $font__line-height-body * 1rem;
 }
 
 .alignright {
@@ -14,8 +14,8 @@
 	float: right;
 
 	/*rtl:ignore*/
-	margin-left: 1.5em;
-	margin-bottom: 1.5em;
+	margin-left: $font__line-height-body * 1rem;
+	margin-bottom: $font__line-height-body * 1rem;
 }
 
 .aligncenter {
@@ -23,5 +23,5 @@
 
 	@include center-block;
 
-	margin-bottom: 1.5em;
+	margin-bottom: $font__line-height-body * 1rem;
 }

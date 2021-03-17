@@ -1,5 +1,5 @@
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: $font__line-height-body * 1rem;
 }
 
 dfn,
@@ -10,18 +10,18 @@ i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0 $font__line-height-body * 1rem;
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin: 0 0 $font__line-height-body * 1rem;
 }
 
 pre {
 	background: $color__background-pre;
 	font-family: $font__pre;
 	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
+	margin-bottom: $font__line-height-pre * 1rem;
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;

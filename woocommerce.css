@@ -314,7 +314,7 @@ ul.products li.product .button {
 	top: 0;
 	left: 0;
 	position: absolute;
-	padding-top: 1.5em;
+	padding-top: 1.25rem;
 }
 
 .star-rating span::before {
@@ -507,7 +507,7 @@ p.no-comments {
  * WooCommerce Price Filter
  */
 .widget_price_filter .price_slider {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.25rem;
 }
 
 .widget_price_filter .price_slider_amount {
