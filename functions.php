@@ -13,7 +13,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', $this_theme->get( 'Version' ) );
 }
 
-if ( ! function_exists( 'apertif_setup' ) ) :
+if ( ! function_exists( 'apertif_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -102,7 +102,7 @@ if ( ! function_exists( 'apertif_setup' ) ) :
 			)
 		);
 	}
-endif;
+} //end if
 add_action( 'after_setup_theme', 'apertif_setup' );
 
 /**

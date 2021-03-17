@@ -13,14 +13,14 @@
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
+		<?php if ( 'post' === get_post_type() ) { ?>
 		<div class="entry-meta">
 			<?php
 			apertif_posted_on();
 			apertif_posted_by();
 			?>
 		</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<?php } //end if ?>
 	</header><!-- .entry-header -->
 
 	<?php apertif_post_thumbnail(); ?>

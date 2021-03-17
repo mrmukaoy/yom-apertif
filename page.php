@@ -18,17 +18,17 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
+		while ( have_posts() ) {
 			the_post();
 
 			get_template_part( '_inc/template-parts/content', 'page' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
+			if ( comments_open() || get_comments_number() ) {
 				comments_template();
-			endif;
+			} //end if
 
-		endwhile; // End of the loop.
+		} //end while // End of the loop.
 		?>
 
 	</main><!-- #main -->

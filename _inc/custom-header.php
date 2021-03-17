@@ -34,7 +34,7 @@ function apertif_custom_header_setup() {
 }
 add_action( 'after_setup_theme', 'apertif_custom_header_setup' );
 
-if ( ! function_exists( 'apertif_header_style' ) ) :
+if ( ! function_exists( 'apertif_header_style' ) ) {
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
@@ -56,7 +56,7 @@ if ( ! function_exists( 'apertif_header_style' ) ) :
 		<style type="text/css">
 		<?php
 		// Has the text been hidden?
-		if ( ! display_header_text() ) :
+		if ( ! display_header_text() ) {
 			?>
 			.site-title,
 			.site-description {
@@ -65,14 +65,14 @@ if ( ! function_exists( 'apertif_header_style' ) ) :
 				}
 			<?php
 			// If the user has set a custom color for the text use that.
-		else :
+		} else {
 			?>
 			.site-title a,
 			.site-description {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
-		<?php endif; ?>
+		<?php } //end if; ?>
 		</style>
 		<?php
 	}
-endif;
+} //end if;
