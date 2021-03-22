@@ -5,6 +5,37 @@
 .post,
 .page {
 	margin: 0 0 $font__line-height-body * 1rem;
+
+	.entry-title,
+	.entry-meta,
+	.entry-content > h1,
+	.entry-content > h2,
+	.entry-content > h3,
+	.entry-content > h4,
+	.entry-content > h5,
+	.entry-content > h6,
+	.entry-content > p,
+	.entry-content > ol,
+	.entry-content > ul,
+	.entry-content > .wp-block-file,
+	.entry-content > .wp-block-audio,
+	.entry-footer,
+	.comments-area {
+		background-color: #eeeeff;
+		margin-left: $font__line-height-body * 1rem;
+		margin-right: $font__line-height-body * 1rem;
+		max-width: 65rem;
+
+		@media screen and (min-width: 37.5rem) {
+			margin-left: $font__line-height-body * 2rem;
+			margin-right: $font__line-height-body * 2rem;
+		}
+		@media screen and (min-width: 65rem) {
+			width: 95%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 }
 
 .updated:not(.published) {
