@@ -4,5 +4,30 @@ h3,
 h4,
 h5,
 h6 {
+	margin: 0;
+	color: shade($grey, $level3);
+	font-weight: 700;
 	clear: both;
+}
+
+h1 {
+	font-family: $font__heading;
+	@include font-size($size-4);
+}
+h2 {
+	font-family: $font__heading;
+	@include font-size($size-3);
+}
+h3 {
+	font-family: $font__heading;
+	@include font-size($size-2);
+}
+h4 {
+	@include font-size($size-1);
+}
+h5 {
+	@include font-size($size-0);
+}
+h6 {
+	@include font-size($size-0);
 }
