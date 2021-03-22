@@ -172,6 +172,21 @@ require get_template_directory() . '/_inc/template-functions.php';
  */
 require get_template_directory() . '/_inc/customizer.php';
 
+/* Disable 'full screen' editing as the default */
+if ( is_admin() ) {
+	function apertif_disable_editor_fullscreen_as_default() {
+		$script = "window.onload = function() {
+			const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' );
+			if ( isFullscreenMode ) {
+				wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' );
+			}
+		}";
+		wp_add_inline_script( 'wp-blocks', $script );
+	}
+	add_action( 'enqueue_block_editor_assets', 'apertif_disable_editor_fullscreen_as_default' );
+}
+
+
 /**
  * Load Jetpack compatibility file.
  */
