@@ -50,6 +50,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 
+/**
+ * Set font size
+ * Usage: @include font-size(1.2);
+ */
+
+/**
+ * Type scale is using minor third modular
+ * http://www.modularscale.com/?1&em&1.2&web&text
+ */
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -402,8 +412,9 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
+	color: #424242;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.25;
 }
@@ -414,7 +425,43 @@ h3,
 h4,
 h5,
 h6 {
+	margin: 0;
+	color: #272727;
+	font-weight: 700;
 	clear: both;
+}
+
+h1 {
+	font-family: Times, "Times New Roman", serif;
+	font-size: 33.184px;
+	font-size: 2.074rem;
+}
+
+h2 {
+	font-family: Times, "Times New Roman", serif;
+	font-size: 27.648px;
+	font-size: 1.728rem;
+}
+
+h3 {
+	font-family: Times, "Times New Roman", serif;
+	font-size: 23.04px;
+	font-size: 1.44rem;
+}
+
+h4 {
+	font-size: 19.2px;
+	font-size: 1.2rem;
+}
+
+h5 {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 16px;
+	font-size: 1rem;
 }
 
 p {
@@ -537,17 +584,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #923a3a;
 }
 
 a:visited {
-	color: #800080;
+	color: #923a3a;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: #682a2a;
 }
 
 a:focus {
@@ -564,32 +611,44 @@ a:active {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.wp-block-button__link {
 	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
+	border-color: #923a3a;
+	border-radius: 1.25rem;
+	background: #923a3a;
+	color: #fff;
 	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	padding: 0.6em 1em;
 }
 
 button:hover,
+button:focus,
 input[type="button"]:hover,
+input[type="button"]:focus,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+	background: #682a2a;
+	border-color: #682a2a;
 }
 
-button:active,
-button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+.is-style-outline > .wp-block-button__link:not(.has-text-color),
+.wp-block-button__link.is-style-outline:not(.has-text-color) {
+	border-color: #923a3a;
+	color: #923a3a;
+}
+
+.is-style-outline > .wp-block-button__link:not(.has-text-color):hover,
+.is-style-outline > .wp-block-button__link:not(.has-text-color):focus,
+.wp-block-button__link.is-style-outline:not(.has-text-color):hover,
+.wp-block-button__link.is-style-outline:not(.has-text-color):focus {
+	background: #682a2a;
+	border-color: #682a2a;
+	color: #fff;
 }
 
 input[type="text"],
@@ -608,7 +667,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
+	color: #838383;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
@@ -630,7 +689,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	color: #272727;
 }
 
 select {
@@ -754,6 +813,117 @@ textarea {
 .post,
 .page {
 	margin: 0 0 1.25rem;
+}
+
+.post .entry-title,
+.post .entry-meta,
+.post .entry-content > h1,
+.post .entry-content > h2,
+.post .entry-content > h3,
+.post .entry-content > h4,
+.post .entry-content > h5,
+.post .entry-content > h6,
+.post .entry-content > p,
+.post .entry-content > ol,
+.post .entry-content > ul,
+.post .entry-content > .wp-block-file,
+.post .entry-content > .wp-block-audio,
+.post .entry-footer,
+.post .comments-area,
+.page .entry-title,
+.page .entry-meta,
+.page .entry-content > h1,
+.page .entry-content > h2,
+.page .entry-content > h3,
+.page .entry-content > h4,
+.page .entry-content > h5,
+.page .entry-content > h6,
+.page .entry-content > p,
+.page .entry-content > ol,
+.page .entry-content > ul,
+.page .entry-content > .wp-block-file,
+.page .entry-content > .wp-block-audio,
+.page .entry-footer,
+.page .comments-area {
+	background-color: #eef;
+	margin-left: 1.25rem;
+	margin-right: 1.25rem;
+	max-width: 65rem;
+}
+
+@media screen and (min-width: 37.5rem) {
+
+	.post .entry-title,
+	.post .entry-meta,
+	.post .entry-content > h1,
+	.post .entry-content > h2,
+	.post .entry-content > h3,
+	.post .entry-content > h4,
+	.post .entry-content > h5,
+	.post .entry-content > h6,
+	.post .entry-content > p,
+	.post .entry-content > ol,
+	.post .entry-content > ul,
+	.post .entry-content > .wp-block-file,
+	.post .entry-content > .wp-block-audio,
+	.post .entry-footer,
+	.post .comments-area,
+	.page .entry-title,
+	.page .entry-meta,
+	.page .entry-content > h1,
+	.page .entry-content > h2,
+	.page .entry-content > h3,
+	.page .entry-content > h4,
+	.page .entry-content > h5,
+	.page .entry-content > h6,
+	.page .entry-content > p,
+	.page .entry-content > ol,
+	.page .entry-content > ul,
+	.page .entry-content > .wp-block-file,
+	.page .entry-content > .wp-block-audio,
+	.page .entry-footer,
+	.page .comments-area {
+		margin-left: 2.5rem;
+		margin-right: 2.5rem;
+	}
+}
+
+@media screen and (min-width: 65rem) {
+
+	.post .entry-title,
+	.post .entry-meta,
+	.post .entry-content > h1,
+	.post .entry-content > h2,
+	.post .entry-content > h3,
+	.post .entry-content > h4,
+	.post .entry-content > h5,
+	.post .entry-content > h6,
+	.post .entry-content > p,
+	.post .entry-content > ol,
+	.post .entry-content > ul,
+	.post .entry-content > .wp-block-file,
+	.post .entry-content > .wp-block-audio,
+	.post .entry-footer,
+	.post .comments-area,
+	.page .entry-title,
+	.page .entry-meta,
+	.page .entry-content > h1,
+	.page .entry-content > h2,
+	.page .entry-content > h3,
+	.page .entry-content > h4,
+	.page .entry-content > h5,
+	.page .entry-content > h6,
+	.page .entry-content > p,
+	.page .entry-content > ol,
+	.page .entry-content > ul,
+	.page .entry-content > .wp-block-file,
+	.page .entry-content > .wp-block-audio,
+	.page .entry-footer,
+	.page .comments-area {
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .updated:not(.published) {

@@ -10,8 +10,8 @@
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "Contributors",
-            "homepage": "https://github.com/Automattic/_s/graphs/contributors"
+            "name": "Martin Yoakum",
+            "homepage": "https://github.com/mrmukaoy"
         }
     ],
     "require": {
